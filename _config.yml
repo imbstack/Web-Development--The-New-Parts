@@ -1,0 +1,8 @@
+auto: true
+server: true
+pygments: true
+exclude: 
+  Gemfile
+  README.md
+  speakernotes.haml
+  index.haml
