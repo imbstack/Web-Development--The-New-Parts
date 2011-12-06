@@ -6,6 +6,6 @@ Bundle install the gems then run the local dev server with
 <pre><code>ejekyll</code></pre>
 
 To have the sass automagically recompile
-<pre><code>sass --watch ./resources</code></pre>
+<pre><code>compass watch</code></pre>
 
 This presentation is by "Tom Dooner":http://tomdooner.com and "Brian Stack":http://brianstack.net.
