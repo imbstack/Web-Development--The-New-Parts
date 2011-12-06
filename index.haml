@@ -14,10 +14,31 @@
         padding:5px;
       }
       div.slide#pseudoclasses tr:nth-child(odd) {
-        color:#F00;
+        color:#FFF;
       }
       div.slide#pseudoclasses tr:nth-child(even) {
-        color:#0F0;
+        color:rgba(255,255,255,0.5);
+      }
+      div.roundy {
+        border-radius: 20px;
+        width:300px;
+        height:100px;
+        margin:auto;
+        background-color:rgba(0,0,0,0.5);
+      }
+      div.centervertically {
+        display:table-cell;
+        vertical-align:middle;
+        height:100px;
+        width:300px;
+        text-align:center;
+      }
+      div.shadow {
+        box-shadow:0px 0px 50px rgba(255,255,255,0.6);
+      }
+      div.gradient {
+        background-image:-moz-linear-gradient(bottom , #000000 0%, rgba(255, 255, 255, 0.5) 50%,rgba(0,0,0,1) 100%);
+        background-image:-webkit-linear-gradient(center bottom , #000000 0%, rgba(255, 255, 255, 0.5) 50%,rgba(0,0,0,1) 100%);
       }
 
   %body
@@ -73,6 +94,28 @@
         %tr
           %td (1,4)
           %td (2,4)
+    .slide
+      %h1 CSS3 Properties
+      %div.roundy
+        %div.centervertically{:style=>""}
+          Rounded Corners!
+      .note
+        border-radius: 20px;
+    .slide
+      %h1 CSS3 Properties
+      %div.roundy.shadow
+        %div.centervertically{:style=>""}
+          Box Shadows!
+      .note
+        box-shadow: 0px 0px 40px rgba(255,255,255,0.6);
+    .slide
+      %h1 CSS3 Properties
+      %div.roundy.shadow.gradient
+        %div.centervertically
+          Gradients!
+      .note
+        box-shadow: 0px 0px 40px rgba(255,255,255,0.6);
+
     .slide
       %h1 JAVASCRIPT
       %h1 COFFEESCRIPT
