@@ -6,6 +6,19 @@
     %link{:rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection, print', :href => 'resources/local.css'}
     %link{:href => "resources/print.css", :rel => "stylesheet", :type => "text/css"}
     %script{:src => 'resources/slidy.js', :charset => 'utf-8', :type => 'text/javascript'}
+    :css
+      div.slide#pseudoclasses table {
+        margin:auto;
+      }
+      div.slide#pseudoclasses td {
+        padding:5px;
+      }
+      div.slide#pseudoclasses tr:nth-child(odd) {
+        color:#F00;
+      }
+      div.slide#pseudoclasses tr:nth-child(even) {
+        color:#0F0;
+      }
 
   %body
     .slide
@@ -30,8 +43,36 @@
       %h1 HTML5
       %h1 HAML/SLIM/ERB
     .slide
-      %h1 CSS3
-      %h1 SASS/LESS
+      %h1 CSS: The Old Stuff
+      %ul{:style=>"width:300px;text-align:left;margin:auto;"}
+        %li a:hover
+        %li a:first-line
+        %li a.class &gt; span
+    .slide
+      %h1 CSS3 Selectors
+      %ul{:style=>"width:300px;text-align:left;margin:auto;"}
+        %li a[href="http://google.com"]
+        %li img[class~="filler"] <!-- One in a space-separated list --> 
+        %li img[src$=".png"]
+        %li img[src*="images/"]
+    .slide#pseudoclasses
+      %h1 CSS3 Pseudo-Classes
+      %ul{:style=>"width:300px;text-align:left;margin:auto;"}
+        %li tr:nth-child(odd)
+        %li tr:nth-child(even)
+      %table{:style=>"border:4px solid #FFF"}
+        %tr
+          %td (1,1)
+          %td (2,1)
+        %tr
+          %td (1,2)
+          %td (2,2)
+        %tr
+          %td (1,3)
+          %td (2,3)
+        %tr
+          %td (1,4)
+          %td (2,4)
     .slide
       %h1 JAVASCRIPT
       %h1 COFFEESCRIPT
