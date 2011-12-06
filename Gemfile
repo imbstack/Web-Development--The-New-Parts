@@ -1,2 +1,4 @@
+source :rubygems
+
 gem 'jekyll'
-gem 'jekyll-ext'
+gem 'jekyll_ext'
