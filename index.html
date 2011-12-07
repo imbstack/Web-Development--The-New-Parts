@@ -4,6 +4,7 @@
     <title>WebDev New Parts</title>
     <link href='resources/slidy.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
     <link href='resources/local.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
+    <link href='resources/syntax.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
     <link href='resources/print.css' rel='stylesheet' type='text/css' />
     <script charset='utf-8' src='resources/slidy.js' type='text/javascript'></script>
     <style type='text/css'>
@@ -15,10 +16,31 @@
           padding:5px;
         }
         div.slide#pseudoclasses tr:nth-child(odd) {
-          color:#F00;
+          color:#FFF;
         }
         div.slide#pseudoclasses tr:nth-child(even) {
-          color:#0F0;
+          color:rgba(255,255,255,0.5);
+        }
+        div.roundy {
+          border-radius: 20px;
+          width:300px;
+          height:100px;
+          margin:auto;
+          background-color:rgba(0,0,0,0.5);
+        }
+        div.centervertically {
+          display:table-cell;
+          vertical-align:middle;
+          height:100px;
+          width:300px;
+          text-align:center;
+        }
+        div.shadow {
+          box-shadow:0px 0px 50px rgba(255,255,255,0.6);
+        }
+        div.gradient {
+          background-image:-moz-linear-gradient(bottom , #000000 0%, rgba(255, 255, 255, 0.5) 50%,rgba(0,0,0,1) 100%);
+          background-image:-webkit-linear-gradient(center bottom , #000000 0%, rgba(255, 255, 255, 0.5) 50%,rgba(0,0,0,1) 100%);
         }
       /*]]>*/
     </style>
@@ -87,9 +109,42 @@
         </tr>
         <tr>
           <td>(1,4)</td>
-          <td>(2,5)</td>
+          <td>(2,4)</td>
         </tr>
       </table>
+    </div>
+    <div class='slide'>
+      <h1>CSS3 Properties</h1>
+      <div class='roundy'>
+        <div class='centervertically' style=''>
+          Rounded Corners!
+        </div>
+      </div>
+      <div class='note'>
+        border-radius: 20px;
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>CSS3 Properties</h1>
+      <div class='roundy shadow'>
+        <div class='centervertically' style=''>
+          Box Shadows!
+        </div>
+      </div>
+      <div class='note'>
+        box-shadow: 0px 0px 40px rgba(255,255,255,0.6);
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>CSS3 Properties</h1>
+      <div class='roundy shadow gradient'>
+        <div class='centervertically'>
+          Gradients!
+        </div>
+      </div>
+      <div class='note'>
+        box-shadow: 0px 0px 40px rgba(255,255,255,0.6);
+      </div>
     </div>
     <div class='slide'>
       <h1>JAVASCRIPT</h1>

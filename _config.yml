@@ -3,6 +3,8 @@ server: true
 pygments: true
 exclude: 
   Gemfile
-  README.md
+  Gemfile.lock
+  README.textile
+  config.rb
   speakernotes.haml
   index.haml
