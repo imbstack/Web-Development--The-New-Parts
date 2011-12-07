@@ -1,20 +1,20 @@
-/* line 4, local.scss */
+/* line 10, local.scss */
 strong {
   font-family: "CabinSemiBold", "Sans";
   color: #f0f0f0;
 }
 
-/* line 9, local.scss */
+/* line 15, local.scss */
 body {
   background-image: url(px_by_Gre3g.png);
 }
 
-/* line 13, local.scss */
+/* line 19, local.scss */
 div.toolbar {
   text-shadow: none;
 }
 
-/* line 17, local.scss */
+/* line 23, local.scss */
 div.slide {
   background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, rgba(55, 129, 184, 0.75)), color-stop(100%, rgba(255, 0, 0, 0.05)));
   background: -webkit-linear-gradient(top left, rgba(55, 129, 184, 0.75), rgba(255, 0, 0, 0.05));
@@ -24,7 +24,7 @@ div.slide {
   background: linear-gradient(top left, rgba(55, 129, 184, 0.75), rgba(255, 0, 0, 0.05));
 }
 
-/* line 21, local.scss */
+/* line 27, local.scss */
 span.topline {
   border-top: 1px solid #ddd;
   padding-top: 8px;
@@ -32,35 +32,46 @@ span.topline {
   padding-right: 40px;
 }
 
-/* line 28, local.scss */
+/* line 34, local.scss */
 div.bigt {
   padding-top: 23%;
   font-size: 200%;
 }
 
-/* line 33, local.scss */
+/* line 39, local.scss */
 div.note {
   position: absolute;
   bottom: 25px;
   right: 5px;
   font-size: 60%;
+  width: 300px;
+  /*change this to make it generic*/
   border: 1px solid rgba(10, 10, 10, 0.5);
   background: rgba(10, 10, 10, 0.4);
   box-shadow: inset 0 0 8px #0a0a0a;
   border-radius: 5px;
-  width: 300px;
-  /*change this to make it generic*/
 }
-/* line 43, local.scss */
+/* line 46, local.scss */
 div.note li {
   list-style: none;
 }
 
-/* line 48, local.scss */
+/* line 51, local.scss */
 div.toolbar {
   opacity: 0.3;
 }
-/* line 50, local.scss */
+/* line 53, local.scss */
 div.toolbar:hover {
   opacity: 0.9;
+}
+
+/* line 58, local.scss */
+pre {
+  font-family: "monospace";
+  text-shadow: none;
+  border: 1px solid rgba(10, 10, 10, 0.5);
+  background: rgba(10, 10, 10, 0.4);
+  box-shadow: inset 0 0 8px #0a0a0a;
+  border-radius: 5px;
+  text-align: left;
 }
