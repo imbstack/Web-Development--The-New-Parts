@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>WebDev New Parts</title>
+    <link href='resources/slidy.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
+    <link href='resources/local.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
+    <link href='resources/print.css' rel='stylesheet' type='text/css' />
+    <link href='resources/desert.css' rel='stylesheet' type='text/css' />
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js' type='text/javascript'></script>
+    <script src='resources/prettify.js' type='text/javascript'></script>
+    <script src='resources/hilitehaml.js' type='text/javascript'></script>
+    <script charset='utf-8' src='resources/slidy.js' type='text/javascript'></script>
+    <script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' type='text/javascript'></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        
+      $(document).ready(function() {
+        return prettyPrint();
+      });
+    
+      //]]>
+    </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function runWorker() {
+            var worker = new Worker('resources/mersenne_prime.js');
+            worker.onmessage = function(e) {
+                alert(e.data ? "Found a Mersenne Prime!" : "Womp womp.");
+            };
+            worker.postMessage(2202);
+            worker.postMessage(2203);
+        }
+      //]]>
+    </script>
+  </head>
+  <body>
+    <div class='slide'>
+      <div class='bigt'>
+        <span>Web Development: The New Stuff</span>
+      </div>
+    </div>
+    <div class='slide'>
+      <div class='realbig'>\( 2^p - 1 \)</div>
+      <div class='realbig'>may be prime!</div>
+    </div>
+    <div class='slide'>
+      <h1>Front End Web</h1>
+      <h1>HTML + CSS + Javascript</h1>
+      <div class='note'>
+        <li>test of note</li>
+        <li>there is stuff here!</li>
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>This is not art</h1>
+      <h3>it just feels kinda artsy</h3>
+      <div class='note'>
+        <li>test of note2</li>
+        <li>there is stuff here!</li>
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>CSS: The Old Stuff</h1>
+      <ul class='afewpoints'>
+        <li>a:hover</li>
+        <li>a:first-line</li>
+        <li>a.class &gt; span</li>
+      </ul>
+    </div>
+    <div class='slide'>
+      <h1>CSS3 Selectors</h1>
+      <ul class='afewpoints'>
+        <li>a[href="http://google.com"]</li>
+        <li>img[class~="filler"] <!-- One in a space-separated list --></li>
+        <li>img[src$=".png"]</li>
+        <li>img[src*="images/"]</li>
+      </ul>
+    </div>
+    <div class='slide' id='pseudoclasses'>
+      <h1>CSS3 Pseudo-Classes</h1>
+      <ul class='afewpoints'>
+        <li>tr:nth-child(odd)</li>
+        <li>tr:nth-child(even)</li>
+      </ul>
+      <table style='border:4px solid #FFF'>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>31</td>
+        </tr>
+      </table>
+    </div>
+    <div class='slide'>
+      <h1>CSS3 Properties</h1>
+      <div class='roundy'>
+        <div class='centervertically' style=''>
+          Rounded Corners!
+        </div>
+      </div>
+      <div class='note'>
+        border-radius: 20px;
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>CSS3 Properties</h1>
+      <div class='roundy shadow'>
+        <div class='centervertically' style=''>
+          Box Shadows!
+        </div>
+      </div>
+      <div class='note'>
+        box-shadow: 0px 0px 40px rgba(255,255,255,0.6);
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>CSS3 Properties</h1>
+      <div class='roundy shadow_inset'>
+        <div class='centervertically'>
+          Inset Shadows!
+        </div>
+      </div>
+      <div class='note'>
+        box-shadow: 0px 0px 40px rgba(255,255,255,0.6) inset;
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>CSS3 Properties</h1>
+      <div class='roundy shadow gradient'>
+        <div class='centervertically'>
+          Gradients!
+        </div>
+      </div>
+      <div class='note'>
+        box-shadow: 0px 0px 40px rgba(255,255,255,0.6);
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>CSS3 Animations</h1>
+      <ul class='afewpoints'>
+        <li>Select element, define keyframes and animation type.</li>
+        <li>No support in COMPASS</li>
+        <li>
+          <a href='https://developer.mozilla.org/en/CSS/CSS_animations'>Mozilla Developer Network</a>
+        </li>
+      </ul>
+    </div>
+    <div class='slide'>
+      <h1>Javascript History API</h1>
+      <a href='mersenne.html' onclick="javascript:history.pushState({}, 'Another Page!', 'mersenne.html#('+(w3c_slidy.slide_number+1)+')');return false;">
+        <div class='roundy'>
+          <div class='centervertically'>
+            Go to mersenne.html
+          </div>
+        </div>
+      </a>
+      <div class='note'>
+        history.pushState({},'Title', 'mersenne.html')
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>Javascript Geolocation</h1>
+      <a onclick="javascript:navigator.geolocation.getCurrentPosition(function(s){alert(s.coords.latitude + ', ' + s.coords.longitude)})">
+        <div class='roundy'>
+          <div class='centervertically'>
+            Find Me!
+          </div>
+        </div>
+      </a>
+      <div class='note'>
+        navigator.geolocation.
+        getCurrentPosition(callback)
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>Web Workers</h1>
+      <pre class='prettyprint'><code>var worker = new Worker('resources/mersenne_prime.js');&#x000A;worker.onmessage = function(e) {&#x000A;    alert(e.data ? "Found a Mersenne Prime!" : "Womp womp.");&#x000A;};&#x000A;worker.postMessage(2202);&#x000A;worker.postMessage(2203);</code></pre>
+      <a onclick='javascript:runWorker();'>
+        <div class='roundy'>
+          <div class='centervertically'>
+            Run Worker!
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class='slide'>
+      <div class='bigt'>
+        <span contenteditable='true'>Content Editable*</span>
+      </div>
+      <div class='note'>
+        *no really, try it!
+      </div>
+    </div>
+    <div class='slide'>
+      <h1>Javascript &#x21dd; CoffeeScript</h1>
+      <pre class='prettyprint'><code>#coffeescript&#x000A;cubes = (math.cube num for num in list)</code></pre>
+      <pre class='prettyprint'><code>/* javascript */&#x000A;cubes = (function() {&#x000A;  var _i, _len, _results;&#x000A;  _results = [];&#x000A;  for (_i = 0, _len = list.length; _i &lt; _len; _i++) {&#x000A;    num = list[_i];&#x000A;    _results.push(math.cube(num));&#x000A;  }&#x000A;  return _results;&#x000A;})();</code></pre>
+      <div class='important'>Important: Lexical Scoping and Variable Safety! It's not just prettier.</div>
+    </div>
+    <div class='slide'>
+      <h1>CoffeeScript is Classy</h1>
+      <pre class='prettyprint'><code>class Animal&#x000A;  constructor: (@name) ->&#x000A;&#x000A;  move: (meters) ->&#x000A;    alert @name + " moved #&#123;meters&#125;m."&#x000A;&#x000A;class Snake extends Animal&#x000A;  move: ->&#x000A;    alert "Slithering..."&#x000A;    super 5</code></pre>
+      <pre class='prettyprint'><code>Animal = (function() {&#x000A;  function Animal(name) {&#x000A;    this.name = name;&#x000A;  }&#x000A;  Animal.prototype.move = function(meters) {&#x000A;    return alert(this.name + (" moved " + meters + "m."));&#x000A;  };&#x000A;  return Animal;&#x000A;})();&#x000A;</code></pre>
+    </div>
+    <div class='slide'>
+      <h1>If someone will purchase me geowebies.com, I will be forever grateful.</h1>
+    </div>
+    <div class='slide'>
+      <h1>Haml !!!</h1>
+      <div class='note'>sweeping the rails world like a wildfire of chicken</div>
+      <pre class='prettyprint lang-css'><code>#profile&#x000A;  .left.column&#x000A;    #date= print_date&#x000A;    #address= current_user.address&#x000A;  .right.column&#x000A;    #email= current_user.email&#x000A;    #bio= current_user.bio</code></pre>
+      <pre class='prettyprint'><code>&lt;div id="profile"&gt;&#x000A;  &lt;div class="left column"&gt;&#x000A;    &lt;div id="date"&gt;&lt;%= print_date %&gt;&lt;/div&gt;&#x000A;    &lt;div id="address"&gt;&lt;%= current_user.address %&gt;&lt;/div&gt;&#x000A;  &lt;/div&gt;&#x000A;  &lt;div class="right column"&gt;&#x000A;    &lt;div id="email"&gt;&lt;%= current_user.email %&gt;&lt;/div&gt;&#x000A;    &lt;div id="bio"&gt;&lt;%= current_user.bio %&gt;&lt;/div&gt;&#x000A;  &lt;/div&gt;&#x000A;&lt;/div&gt;&#x000A;</code></pre>
+    </div>
+    <div class='slide'>
+      <h1>Sassy</h1>
+      <img src='http://sass-lang.com/images/sass.gif' />
+    </div>
+    <div class='slide'>
+      <div class='credits'>
+        Brian Stack &lt;bis12@case.edu&gt; ->
+        <a href='http://brianstack.net'>website</a>
+        <br />
+        Tom Dooner &lt;ted27@case.edu&gt; ->
+        <a href='http://tomdooner.com'>website</a>
+      </div>
+    </div>
+  </body>
+</html>

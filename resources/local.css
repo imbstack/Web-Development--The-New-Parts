@@ -1,0 +1,164 @@
+/* line 11, local.scss */
+strong {
+  font-family: "CabinSemiBold", "Sans";
+  color: #f0f0f0;
+}
+
+/* line 16, local.scss */
+body {
+  background-image: url(px_by_Gre3g.png);
+}
+
+/* line 20, local.scss */
+div.toolbar {
+  text-shadow: none;
+}
+
+/* line 24, local.scss */
+div.slide {
+  background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, rgba(55, 129, 184, 0.75)), color-stop(100%, rgba(255, 0, 0, 0.05)));
+  background: -webkit-linear-gradient(top left, rgba(55, 129, 184, 0.75), rgba(255, 0, 0, 0.05));
+  background: -moz-linear-gradient(top left, rgba(55, 129, 184, 0.75), rgba(255, 0, 0, 0.05));
+  background: -o-linear-gradient(top left, rgba(55, 129, 184, 0.75), rgba(255, 0, 0, 0.05));
+  background: -ms-linear-gradient(top left, rgba(55, 129, 184, 0.75), rgba(255, 0, 0, 0.05));
+  background: linear-gradient(top left, rgba(55, 129, 184, 0.75), rgba(255, 0, 0, 0.05));
+}
+/* line 26, local.scss */
+div.slide a {
+  color: #ee5;
+}
+/* line 30, local.scss */
+div.slide#pseudoclasses table {
+  margin: auto;
+}
+/* line 33, local.scss */
+div.slide#pseudoclasses td {
+  padding: 5px;
+}
+/* line 36, local.scss */
+div.slide#pseudoclasses tr:nth-child(odd) {
+  color: #FFF;
+}
+/* line 39, local.scss */
+div.slide#pseudoclasses tr:nth-child(even) {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 43, local.scss */
+div.slide div.roundy {
+  border-radius: 20px;
+  width: 300px;
+  height: 100px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 50, local.scss */
+div.slide ul.afewpoints {
+  width: 300px;
+  text-align: left;
+  margin: auto;
+}
+/* line 57, local.scss */
+div.slide ul.afewthings li {
+  list-style: none;
+}
+/* line 61, local.scss */
+div.slide div.centervertically {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100px;
+  width: 300px;
+  text-align: center;
+}
+/* line 68, local.scss */
+div.slide div.shadow {
+  box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.6);
+}
+/* line 71, local.scss */
+div.slide div.shadow_inset {
+  box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.6) inset;
+}
+/* line 74, local.scss */
+div.slide div.gradient {
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #000000), color-stop(50%, rgba(255, 255, 255, 0.5)), color-stop(100%, #000000));
+  background: -webkit-linear-gradient(bottom, #000000, rgba(255, 255, 255, 0.5), #000000);
+  background: -moz-linear-gradient(bottom, #000000, rgba(255, 255, 255, 0.5), #000000);
+  background: -o-linear-gradient(bottom, #000000, rgba(255, 255, 255, 0.5), #000000);
+  background: -ms-linear-gradient(bottom, #000000, rgba(255, 255, 255, 0.5), #000000);
+  background: linear-gradient(bottom, #000000, rgba(255, 255, 255, 0.5), #000000);
+}
+
+/* line 78, local.scss */
+div.realbig {
+  font-size: 5em;
+  margin-bottom: 5%;
+  margin-top: 10%;
+}
+
+/* line 83, local.scss */
+span.topline {
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* line 90, local.scss */
+div.bigt {
+  padding-top: 23%;
+  font-size: 200%;
+}
+
+/* line 95, local.scss */
+div.note {
+  position: absolute;
+  bottom: 25px;
+  right: 5px;
+  font-size: 60%;
+  width: 300px;
+  /*change this to make it generic*/
+  border: 1px solid rgba(10, 10, 10, 0.5);
+  background: rgba(10, 10, 10, 0.4);
+  box-shadow: inset 0 0 8px #0a0a0a;
+  border-radius: 8px;
+}
+/* line 102, local.scss */
+div.note li {
+  list-style: none;
+}
+
+/* line 107, local.scss */
+div.toolbar {
+  opacity: 0.3;
+}
+/* line 109, local.scss */
+div.toolbar:hover {
+  opacity: 0.9;
+}
+
+/* line 114, local.scss */
+pre {
+  font-family: "monospace";
+  text-shadow: none;
+  border: 1px solid rgba(10, 10, 10, 0.5);
+  background: rgba(10, 10, 10, 0.4);
+  box-shadow: inset 0 0 8px #0a0a0a;
+  border-radius: 8px;
+  text-align: left;
+  color: #fee;
+}
+
+/* line 122, local.scss */
+.important {
+  color: #de2;
+}
+
+/* line 126, local.scss */
+.credits {
+  padding-top: 13%;
+  font-size: 1.3em;
+  line-height: 2em;
+}
+/* line 130, local.scss */
+.credits a {
+  color: #ee1;
+}
